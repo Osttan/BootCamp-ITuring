@@ -6,8 +6,8 @@ profissao = "servidor público";
 idade = 34;
 lugar = "London";
 
-console.log(nome);
-console.log(email);
-console.log(profissao);
-console.log(idade);
-console.log(lugar);
+console.log(`${nome}\n${email}\n${profissao}\n${idade}\n${lugar}\n`);
+
+console.log(
+  `${typeof nome}\n${typeof email}\n${typeof profissao}\n${typeof idade}\n${typeof lugar}\n`
+);
