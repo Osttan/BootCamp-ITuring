@@ -1,4 +1,4 @@
-let nome = "Andre",
+const nome = "Andre",
   email = "andre.ostan@gmail.com",
   profissao = "servidor público",
   idade = 34,
