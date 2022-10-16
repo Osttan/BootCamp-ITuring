@@ -1,5 +1,5 @@
-function maiorTernario(num1, num2) {
+function menorTernario(num1, num2) {
   return num1 < num2 ? num1 : num2;
 }
 
-console.log(maiorTernario(10, 5) + "\n" + maiorTernario(5, 10));
+console.log(menorTernario(10, 5) + "\n" + menorTernario(5, 10));
