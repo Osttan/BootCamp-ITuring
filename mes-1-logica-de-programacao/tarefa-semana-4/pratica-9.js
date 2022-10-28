@@ -24,17 +24,19 @@ const listaFilmes = [
 
 function melhorAvaliado(filmes) {
   filmes.sort((a, b) => {
-    if (a.notaAvaliacao < b.notaAvaliacao) {
-      return 1;
+    if (a === b) {
+      return 0;
+    } else {
+      return a - b;
     }
-    if (a.notaAvaliacao > b.notaAvaliacao) {
-      return -1;
-    }
-    return 0;
   });
 
   console.log(
-    `O filme de melhor avaliação com nota ${filmes[0].notaAvaliacao} é: ${filmes[0].titulo}.`
+    `O filme de melhor avaliação com nota ${filmes[0].notaAvaliacao} é: ${
+      filmes[0].titulo
+    }.\nJá o pior avaliado é o ${
+      filmes[filmes.length - 1].titulo
+    }, com a nota de ${filmes[filmes.length - 1].notaAvaliacao}`
   );
 }
 
