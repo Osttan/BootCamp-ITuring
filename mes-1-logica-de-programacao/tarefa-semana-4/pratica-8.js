@@ -20,13 +20,37 @@ const listaFilmes = [
     anoPublicacao: 2014,
     genero: ['Biografia', 'Drama', 'Suspense', 'Guerra'],
   },
+
+  {
+    titulo: 'Poeira em Alto Mar',
+    notaAvaliacao: 0.0,
+    duracao: 240,
+    anoPublicacao: 2013,
+    genero: [
+      'Biografia',
+      'Drama',
+      'Suspense',
+      'Guerra',
+      'Comédia',
+      'Aventura',
+      'Terror',
+    ],
+  },
+
+  {
+    titulo: 'As tranças do Rei Careca',
+    notaAvaliacao: 10.0,
+    duracao: 105,
+    anoPublicacao: 1932,
+    genero: ['Drama'],
+  },
 ];
 
 function exibeFilmes(filmes) {
   filmes.forEach(filme => {
     let generos = filme.genero;
 
-    if (filme.genero.length > 1) {
+    if (generos.length > 1) {
       let ultimosGeneros = generos.slice(-2);
 
       generos.splice(-2);
