@@ -24,23 +24,23 @@ const listaFilmes = [
 
 function exibeFilmes(filmes) {
   filmes.forEach(filme => {
-    if (filme.genero.length > 1) {
-      let ultimosGeneros = filme.genero.slice(-2);
+    let generos = filme.genero;
 
-      filme.genero.splice(-2);
-      filme.genero = filme.genero.join(', ');
+    if (filme.genero.length > 1) {
+      let ultimosGeneros = generos.slice(-2);
+
+      generos.splice(-2);
+      generos = generos.join(', ');
 
       ultimosGeneros = ultimosGeneros.join(' e ');
 
-      filme.genero
-        ? (filme.genero += ', ' + ultimosGeneros)
-        : (filme.genero = ultimosGeneros);
+      generos ? (generos += ', ' + ultimosGeneros) : (generos = ultimosGeneros);
     }
 
     console.log(`${filme.titulo} (Nota: ${filme.notaAvaliacao})
     • Duração: ${filme.duracao} minutos
     • Ano de publicação: ${filme.anoPublicacao}
-    • Gênero: ${filme.genero}\n`);
+    • Gênero: ${generos}\n`);
   });
 }
 
