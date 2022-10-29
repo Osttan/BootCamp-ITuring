@@ -41,7 +41,7 @@ function saldoFinal(transacoes) {
     retiradas = 0,
     saldo;
 
-  transacoes.map(transacao => {
+  transacoes.forEach(transacao => {
     transacao.movimentacao === 'deposito'
       ? (depositos += transacao.valor)
       : (retiradas += transacao.valor);

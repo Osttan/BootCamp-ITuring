@@ -39,7 +39,7 @@ const movimentacoes = [
 function saldoFinal(transacoes) {
   let saldo = 0;
 
-  transacoes.map(transacao => {
+  transacoes.forEach(transacao => {
     transacao.movimentacao === 'deposito'
       ? (saldo += transacao.valor)
       : (saldo -= transacao.valor);

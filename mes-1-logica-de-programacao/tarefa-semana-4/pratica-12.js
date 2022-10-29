@@ -43,7 +43,7 @@ function saldoFinal(transacoes) {
     qtdRetiradas = 0,
     saldo;
 
-  transacoes.map(transacao => {
+  transacoes.forEach(transacao => {
     if (transacao.movimentacao === 'deposito') {
       depositos += transacao.valor;
       qtdDepositos++;
